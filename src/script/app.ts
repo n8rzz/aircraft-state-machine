@@ -1,13 +1,13 @@
 import { AircraftController } from './aircraft/AircraftController';
 
 export class App {
-    private _counterController: AircraftController = null;
+    private _aircraftController: AircraftController = null;
 
     constructor() {
-        this._counterController = new AircraftController();
+        this._aircraftController = new AircraftController();
     }
 
     public update(): void {
-        this._counterController.update();
+        this._aircraftController.update();
     }
 }

@@ -10,18 +10,18 @@
     background-color: #ffffff;
 }
 
-.altitude {
+.context {
     width: 300px;
     display: flex;
     flex-direction: column;
 }
 
-.altitude-view {
+.context-view {
     display: flex;
     justify-content: space-evenly;
 }
 
-.altitude-controls {
+.context-controls {
     display: flex;
     justify-content: space-evenly;
     margin-top: 5px;

@@ -1,25 +1,31 @@
 import { IContext } from './IContext';
-import { AircraftAltitudeContextEnum } from './aircraftContext/AircraftAltitudeContextEnum';
+import { ContextEnum } from './context/ContextEnum';
 
-export class AircraftModel implements IContext {
-    public currentContext: AircraftAltitudeContextEnum = AircraftAltitudeContextEnum.NeutralAltitudeContext;
+export abstract class ModelAbstract implements IContext {
+    public currentContext: ContextEnum = ContextEnum.NeutralAltitudeContext;
     public target: number = 0;
     public value: number = 0;
 
+    protected _name: string = null;
+
     get contextName(): string {
-        return AircraftAltitudeContextEnum[this.currentContext];
+        return ContextEnum[this.currentContext];
     }
 
     get currentValue(): number {
         return this.value;
     }
 
+    constructor(name: string) {
+        this._name = name;
+    }
+
     public decrement(): void {
-        this.value -= 1;
+        return;
     }
 
     public increment(): void {
-        this.value += 1;
+        return;
     }
 
     public updateTarget(targetModifier: number): void {

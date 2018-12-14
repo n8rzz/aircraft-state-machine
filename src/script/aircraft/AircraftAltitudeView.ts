@@ -1,24 +1,24 @@
 export class AircraftAltitudeView {
     private _$contextView: HTMLElement = null;
-    private _$currentValueView: HTMLElement = null;
-    private _$altitudeTargetValue: HTMLElement = null;
+    private _$valueView: HTMLElement = null;
+    private _$targetValue: HTMLElement = null;
     private _currentValue: number = 0;
 
-    constructor(contextView: HTMLElement, currentValueView: HTMLElement, altitudeTargetValue: HTMLElement) {
+    constructor(contextView: HTMLElement, valueView: HTMLElement, targetValue: HTMLElement) {
         this._$contextView = contextView;
-        this._$currentValueView = currentValueView;
-        this._$altitudeTargetValue = altitudeTargetValue;
+        this._$valueView = valueView;
+        this._$targetValue = targetValue;
     }
 
-    public update(currentContext: string, nextValue: number, currentTargetValue: number): void {
-        this._updateCurrentValue(nextValue);
+    public update(currentContext: string, nextValue: number, targetValue: number): void {
+        this._updateValue(nextValue);
 
         this._$contextView.innerText = currentContext;
-        this._$currentValueView.innerText = String(this._currentValue);
-        this._$altitudeTargetValue.innerText = String(currentTargetValue);
+        this._$valueView.innerText = String(this._currentValue);
+        this._$targetValue.innerText = String(targetValue);
     }
 
-    private _updateCurrentValue(nextValue: number): void {
+    private _updateValue(nextValue: number): void {
         this._currentValue = nextValue;
     }
 }

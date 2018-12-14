@@ -1,7 +1,7 @@
-import { AircraftAltitudeContextEnum } from './aircraftContext/AircraftAltitudeContextEnum';
+import { ContextEnum } from './context/ContextEnum';
 
 export interface IContext {
-    currentContext: AircraftAltitudeContextEnum;
+    currentContext: ContextEnum;
     target: number;
     value: number;
     increment: () => void;
