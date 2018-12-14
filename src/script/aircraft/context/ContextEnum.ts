@@ -1,5 +1,8 @@
 export enum ContextEnum {
     'DecrementAltitudeContext',
-    'IncrementAltitudeContext',
     'NeutralAltitudeContext',
+    'IncrementAltitudeContext',
+    'TurnLeftHeadingContext',
+    'NeutralHeadingContext',
+    'TurnRightHeadingContext',
 }

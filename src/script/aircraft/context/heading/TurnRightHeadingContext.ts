@@ -1,9 +1,9 @@
 import { ContextAbstract } from '../ContextAbstract';
 import { IContext } from '../../IContext';
 import { ContextEnum } from '../ContextEnum';
-import { NeutralAltitudeContext } from './NeutralAltitudeContext';
+import { NeutralHeadingContext } from './NeutralHeadingContext';
 
-export class IncrementAltitudeContext extends ContextAbstract {
+export class TurnRightHeadingContext extends ContextAbstract {
     constructor(model: IContext) {
         super(model);
 
@@ -11,13 +11,13 @@ export class IncrementAltitudeContext extends ContextAbstract {
     }
 
     public getNextContext(): any {
-        return NeutralAltitudeContext;
+        return NeutralHeadingContext;
     }
 
     public onEnter(): void {
         super.onEnter();
 
-        this._model.currentContext = ContextEnum.IncrementAltitudeContext;
+        this._model.currentContext = ContextEnum.TurnRightHeadingContext;
     }
 
     public shouldMoveToNextContext(): boolean {

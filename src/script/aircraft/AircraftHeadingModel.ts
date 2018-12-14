@@ -1,8 +1,8 @@
 import { ModelAbstract } from './ModelAbstract';
 
-export class AircraftAltitudeModel extends ModelAbstract {
+export class AircraftHeadingModel extends ModelAbstract {
     constructor() {
-        super('aircraftAltitudeModel');
+        super('aircraftHeadingModel');
     }
 
     public decrement(): void {

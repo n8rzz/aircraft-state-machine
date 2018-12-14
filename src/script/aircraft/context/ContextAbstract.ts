@@ -1,4 +1,6 @@
+// tslint:disable
 import { IContext } from '../IContext';
+import { ContextEnum } from './ContextEnum';
 
 export abstract class ContextAbstract {
     protected _model: IContext = null;
@@ -13,15 +15,15 @@ export abstract class ContextAbstract {
     }
 
     public onEnter(): void {
-        console.log('onEnter');
+        console.log('+++ onEnter', ContextEnum[this._model.currentContext]);
     }
 
     public onExit(): void {
-        console.log('onExit');
+        console.log('--- onExit', ContextEnum[this._model.currentContext]);
     }
 
     public shouldMoveToNextContext(): boolean {
-        console.log('T', this._model.target, this._model.value);
+        console.log(`${this._model.target}:${this._model.value}`, ContextEnum[this._model.currentContext]);
 
         return;
     }
