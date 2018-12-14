@@ -14,9 +14,7 @@ export class NeutralAltitudeContext extends ContextAbstract {
     }
 
     public onEnter(): void {
-        super.onEnter();
-
-        this._model.currentContext = ContextEnum.NeutralAltitudeContext;
+        super.onEnter(ContextEnum.NeutralAltitudeContext);
     }
 
     public shouldMoveToNextContext(): boolean {

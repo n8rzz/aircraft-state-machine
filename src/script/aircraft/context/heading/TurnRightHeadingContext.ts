@@ -15,15 +15,13 @@ export class TurnRightHeadingContext extends ContextAbstract {
     }
 
     public onEnter(): void {
-        super.onEnter();
-
-        this._model.currentContext = ContextEnum.TurnRightHeadingContext;
+        super.onEnter(ContextEnum.TurnRightHeadingContext);
     }
 
     public shouldMoveToNextContext(): boolean {
         super.shouldMoveToNextContext();
 
-        return Math.abs(this._model.value) >= Math.abs(this._model.target);
+        return this._model.value >= this._model.target;
     }
 
     public update(): void {

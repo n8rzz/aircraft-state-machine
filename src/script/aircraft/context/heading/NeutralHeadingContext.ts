@@ -14,9 +14,7 @@ export class NeutralHeadingContext extends ContextAbstract {
     }
 
     public onEnter(): void {
-        super.onEnter();
-
-        this._model.currentContext = ContextEnum.NeutralHeadingContext;
+        super.onEnter(ContextEnum.NeutralHeadingContext);
     }
 
     public shouldMoveToNextContext(): boolean {

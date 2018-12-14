@@ -15,9 +15,7 @@ export class DecrementAltitudeContext extends ContextAbstract {
     }
 
     public onEnter(): void {
-        super.onEnter();
-
-        this._model.currentContext = ContextEnum.DecrementAltitudeContext;
+        super.onEnter(ContextEnum.DecrementAltitudeContext);
     }
 
     public shouldMoveToNextContext(): boolean {

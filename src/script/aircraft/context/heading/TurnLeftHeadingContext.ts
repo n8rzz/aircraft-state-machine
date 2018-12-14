@@ -15,9 +15,7 @@ export class TurnLeftHeadingContext extends ContextAbstract {
     }
 
     public onEnter(): void {
-        super.onEnter();
-
-        this._model.currentContext = ContextEnum.TurnLeftHeadingContext;
+        super.onEnter(ContextEnum.TurnLeftHeadingContext);
     }
 
     public shouldMoveToNextContext(): boolean {
