@@ -8,45 +8,73 @@
         <link rel="stylesheet" href="style/main.css" />
     </head>
     <body>
-        <h3>altitude</h3>
-        <div class="context">
-            <div class="context-view js-altitudeView">
-                <div class="js-altitudeContextName">Initialize</div>
-                <div class="js-altitudeCurrentValue">0</div>
-                <div>Target</div>
-                <div class="js-altitudeTargetValue">0</div>
-            </div>
-            <div class="context-controls">
-                <button class="btn js-btn-decreaseAltitude">-</button>
-                <button class="btn js-btn-increaseAltitude">+</button>
-            </div>
+        <h2>fms/mcp mode control</h2>
+
+        <div class="row">
+                <button class="btn">apron</button>
+                <button class="btn">taxi</button>
+                <button class="btn">waiting</button>
+                <button class="btn">takeoff</button>
+                <button class="btn">climb</button>
+                <button class="btn">cruise</button>
+                <button class="btn">hold</button>
+                <button class="btn">descent</button>
+                <button class="btn">approach</button>
+                <button class="btn">landing</button>
         </div>
 
-        <h3>heading</h3>
-        <div class="context">
-            <div class="context-view js-headingView">
-                <div class="js-headingContextName">Initialize</div>
-                <div class="js-headingCurrentValue">0</div>
-                <div>Target</div>
-                <div class="js-headingTargetValue">0</div>
-            </div>
-            <div class="context-controls">
-                <button class="btn js-btn-turnLeft">Left</button>
-                <button class="btn js-btn-turnRight">Right</button>
-            </div>
-        </div>
+        <h2>a/c contexts</h2>
 
-        <h3>speed</h3>
-        <div class="context">
-            <div class="context-view js-speedView">
-                <div class="js-speedContextName">Initialize</div>
-                <div class="js-speedCurrentValue">0</div>
-                <div>Target</div>
-                <div class="js-speedTargetValue">0</div>
+        <div class="row">
+            <div class="context">
+                <h3>altitude</h3>
+                <div class="context-view js-altitudeView">
+                    <div class="js-altitudeContextName">Initialize</div>
+                    <div>
+                        Current <span class="js-altitudeCurrentValue">0</span>
+                    </div>
+                    <div>
+                        Target <span class="js-altitudeTargetValue">0</span>
+                    </div>
+                </div>
+                <div class="context-controls">
+                    <button class="btn js-btn-decreaseAltitude">-</button>
+                    <button class="btn js-btn-increaseAltitude">+</button>
+                </div>
             </div>
-            <div class="context-controls">
-                <button class="btn js-btn-decreaseSpeed">-</button>
-                <button class="btn js-btn-increaseSpeed">+</button>
+
+            <div class="context">
+                <h3>heading</h3>
+                <div class="context-view js-headingView">
+                    <div class="js-headingContextName">Initialize</div>
+                    <div>
+                        Current <span class="js-headingCurrentValue">0</span>
+                    </div>
+                    <div>
+                        Target <span class="js-headingTargetValue">0</span>
+                    </div>
+                </div>
+                <div class="context-controls">
+                    <button class="btn js-btn-turnLeft">Left</button>
+                    <button class="btn js-btn-turnRight">Right</button>
+                </div>
+            </div>
+
+            <div class="context">
+                <h3>speed</h3>
+                <div class="context-view js-speedView">
+                    <div class="js-speedContextName">Initialize</div>
+                    <div>
+                        Current <span class="js-speedCurrentValue">0</span>
+                    </div>
+                    <div>
+                        Target <span class="js-speedTargetValue">0</span>
+                    </div>
+                </div>
+                <div class="context-controls">
+                    <button class="btn js-btn-decreaseSpeed">-</button>
+                    <button class="btn js-btn-increaseSpeed">+</button>
+                </div>
             </div>
         </div>
 

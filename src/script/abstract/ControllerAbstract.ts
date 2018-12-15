@@ -14,11 +14,13 @@ export abstract class ControllerAbstract {
 
     public update(): void {
         this._context.update();
-        this._view.update(this._model.contextName, this._model.currentValue, this._model.target);
+        this.updateView();
 
-        if (this._context.shouldMoveToNextContext()) {
-            this.updateContext(this._context.getNextContext());
+        if (!this._context.shouldMoveToNextContext()) {
+            return;
         }
+
+        this.updateContext(this._context.getNextContext());
     }
 
     public updateContext(NextContext: any): void {
@@ -28,5 +30,9 @@ export abstract class ControllerAbstract {
 
         this._context.onExit();
         this._context = new NextContext(this._model);
+    }
+
+    public updateView(): void {
+        this._view.update(this._model.contextName, this._model.currentValue, this._model.target);
     }
 }

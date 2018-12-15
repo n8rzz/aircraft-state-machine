@@ -1,28 +1,58 @@
-.btn  {
-    padding: 3px 35px;
-    border: 1px solid #222222;
-    border-radius: 3px;
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+body {
+    font-family: monospace;
+    font-size: 12px;
 }
 
-.btn:hover {
+h1, h2, h3, h4, h5, h6, ul, li, button {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.btn  {
+    background-color: #efefef;
+    border: 1px solid #222222;
+    border-radius: 3px;
+    padding: 3px 35px;
+    transition: all 0.3s ease 0s;
+}
+
+.btn:hover,
+.btn_isActive {
     cursor: pointer;
-    background-color: #ffffff;
+    background-color: dodgerblue;
+    color: #222222;
 }
 
 .context {
-    width: 300px;
+    width: 200px;
     display: flex;
     flex-direction: column;
 }
 
-.context-view {
-    display: flex;
-    justify-content: space-evenly;
-}
+/* .context-view {} */
 
 .context-controls {
     display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.listH > * {
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    margin-top: 5px;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 0;
+}
+
+.row > * + * {
+    margin-left: 10px;
 }

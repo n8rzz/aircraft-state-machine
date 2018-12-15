@@ -59,34 +59,40 @@ export class AircraftController {
         event.preventDefault();
 
         this._altitudeController.decreaseAltitude();
+        this._altitudeController.updateView();
     }
 
     private _onClickIncreaseAltitude(event: UIEvent): void {
         event.preventDefault();
 
         this._altitudeController.increaseAltitude();
+        this._altitudeController.updateView();
     }
 
     private _onClickTurnLeft(event: UIEvent): void {
         event.preventDefault();
 
         this._headingController.turnLeft();
+        this._headingController.updateView();
     }
 
     private _onClickTurnRight(event: UIEvent): void {
         event.preventDefault();
 
         this._headingController.turnRight();
+        this._headingController.updateView();
     }
 
     private _onClickDecreaseSpeed(event: UIEvent): void {
         event.preventDefault();
 
         this._speedController.decreaseSpeed();
+        this._speedController.updateView();
     }
     private _onClickIncreaseSpeed(event: UIEvent): void {
         event.preventDefault();
 
         this._speedController.increaseSpeed();
+        this._speedController.updateView();
     }
 }
