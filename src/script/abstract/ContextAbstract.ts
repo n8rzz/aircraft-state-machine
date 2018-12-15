@@ -1,12 +1,12 @@
 // tslint:disable
-import { IContext } from '../IContext';
+import { IModel } from './IModel';
 import { ContextEnum } from './ContextEnum';
 
 export abstract class ContextAbstract {
-    protected _model: IContext = null;
+    protected _model: IModel = null;
     protected _name: string = '';
 
-    constructor(model: IContext) {
+    constructor(model: IModel) {
         this._model = model;
     }
 

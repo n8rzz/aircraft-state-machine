@@ -1,4 +1,4 @@
-import { ModelAbstract } from './ModelAbstract';
+import { ModelAbstract } from '../abstract/ModelAbstract';
 
 export class AircraftSpeedModel extends ModelAbstract {
     constructor() {

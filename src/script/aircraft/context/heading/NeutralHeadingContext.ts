@@ -1,9 +1,9 @@
-import { ContextAbstract } from '../ContextAbstract';
-import { IContext } from '../../IContext';
-import { ContextEnum } from '../ContextEnum';
+import { ContextAbstract } from '../../../abstract/ContextAbstract';
+import { IModel } from '../../../abstract/IModel';
+import { ContextEnum } from '../../../abstract/ContextEnum';
 
 export class NeutralHeadingContext extends ContextAbstract {
-    constructor(model: IContext) {
+    constructor(model: IModel) {
         super(model);
 
         this.onEnter();

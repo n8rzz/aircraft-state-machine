@@ -1,4 +1,4 @@
-import { ViewAbstract } from './ViewAbstract';
+import { ViewAbstract } from '../abstract/ViewAbstract';
 
 export class AircraftSpeedView extends ViewAbstract {
     constructor(contextView: HTMLElement, valueView: HTMLElement, targetValue: HTMLElement) {

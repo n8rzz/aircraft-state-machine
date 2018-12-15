@@ -1,4 +1,4 @@
-import { ControllerAbstract } from './ControllerAbstract';
+import { ControllerAbstract } from '../abstract/ControllerAbstract';
 import { AircraftAltitudeModel } from './AircraftAltitudeModel';
 import { AircraftAltitudeView } from './AircraftAltitudeView';
 import { DecrementAltitudeContext } from './context/altitude/DecrementAltitudeContext';

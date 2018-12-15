@@ -1,10 +1,10 @@
-import { ContextEnum } from './context/ContextEnum';
+import { ContextEnum } from './ContextEnum';
 
-export interface IContext {
+export interface IModel {
     currentContext: ContextEnum;
     target: number;
     value: number;
-    increment: () => void;
     decrement: () => void;
+    increment: () => void;
     updateTarget: (targetModifier: number) => void;
 }

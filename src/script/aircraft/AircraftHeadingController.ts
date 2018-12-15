@@ -1,4 +1,4 @@
-import { ControllerAbstract } from './ControllerAbstract';
+import { ControllerAbstract } from '../abstract/ControllerAbstract';
 import { AircraftHeadingModel } from './AircraftHeadingModel';
 import { AircraftHeadingView } from './AircraftHeadingView';
 import { TurnLeftHeadingContext } from './context/heading/TurnLeftHeadingContext';

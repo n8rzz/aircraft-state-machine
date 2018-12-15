@@ -1,5 +1,5 @@
-import { ContextAbstract } from './context/ContextAbstract';
-import { ModelAbstract } from './ModelAbstract';
+import { ContextAbstract } from './ContextAbstract';
+import { ModelAbstract } from '../abstract/ModelAbstract';
 import { ViewAbstract } from './ViewAbstract';
 
 export abstract class ControllerAbstract {

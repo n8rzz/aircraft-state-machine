@@ -1,4 +1,4 @@
-import { ControllerAbstract } from './ControllerAbstract';
+import { ControllerAbstract } from '../abstract/ControllerAbstract';
 import { AircraftSpeedModel } from './AircraftSpeedModel';
 import { AircraftSpeedView } from './AircraftSpeedView';
 import { DecreaseSpeedContext } from './context/speed/DecreaseSpeedContext';

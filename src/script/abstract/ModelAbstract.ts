@@ -1,7 +1,7 @@
-import { IContext } from './IContext';
-import { ContextEnum } from './context/ContextEnum';
+import { IModel } from './IModel';
+import { ContextEnum } from './ContextEnum';
 
-export abstract class ModelAbstract implements IContext {
+export abstract class ModelAbstract implements IModel {
     public currentContext: ContextEnum = ContextEnum.NeutralAltitudeContext;
     public target: number = 0;
     public value: number = 0;
