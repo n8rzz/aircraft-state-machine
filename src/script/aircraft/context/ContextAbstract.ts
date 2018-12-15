@@ -17,7 +17,7 @@ export abstract class ContextAbstract {
     public onEnter(nextContext: ContextEnum): void {
         console.log('+++ onEnter', ContextEnum[nextContext]);
 
-        this._model.currentContext = ContextEnum.IncrementAltitudeContext;
+        this._model.currentContext = nextContext;
     }
 
     public onExit(): void {

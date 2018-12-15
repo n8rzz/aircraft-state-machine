@@ -5,4 +5,7 @@ export enum ContextEnum {
     'TurnLeftHeadingContext',
     'NeutralHeadingContext',
     'TurnRightHeadingContext',
+    'DecreaseSpeedContext',
+    'NeutralSpeedContext',
+    'IncreaseSpeedContext',
 }
