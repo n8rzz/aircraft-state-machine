@@ -12,6 +12,16 @@ export abstract class ControllerAbstract {
         this._name = name;
     }
 
+    public overrideContextAndTarget(NextContext: any, nextTarget: number): void {
+        if (NextContext != null) {
+            this.updateContext(NextContext);
+        }
+
+        if (nextTarget != null) {
+            this._model.updateTarget(nextTarget);
+        }
+    }
+
     public update(): void {
         this._context.update();
         this.updateView();

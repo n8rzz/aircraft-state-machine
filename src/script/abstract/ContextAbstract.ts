@@ -25,7 +25,7 @@ export abstract class ContextAbstract {
     }
 
     public shouldMoveToNextContext(): boolean {
-        console.log(`${this._model.target}:${this._model.value}`, ContextEnum[this._model.currentContext]);
+        // console.log(`${this._model.target}:${this._model.value}`, ContextEnum[this._model.currentContext]);
 
         return;
     }

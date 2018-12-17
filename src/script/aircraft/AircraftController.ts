@@ -1,8 +1,11 @@
 import { AircraftAltitudeController } from './AircraftAltitudeController';
 import { AircraftHeadingController } from './AircraftHeadingController';
 import { AircraftSpeedController } from './AircraftSpeedController';
+import { FmsController } from './fms/FmsController';
+import { IFmsOverrideContextAndTarget } from './fms/IFmsOverrideContextAndTarget';
 
 export class AircraftController {
+    private _fmsController: FmsController = null;
     private _altitudeController: AircraftAltitudeController = null;
     private _headingController: AircraftHeadingController = null;
     private _speedController: AircraftSpeedController = null;
@@ -18,6 +21,7 @@ export class AircraftController {
     private _onClickTurnRightHandler: (event: UIEvent) => void = this._onClickTurnRight.bind(this);
     private _onClickDecreaseSpeedHandler: (event: UIEvent) => void = this._onClickDecreaseSpeed.bind(this);
     private _onClickIncreaseSpeedHandler: (event: UIEvent) => void = this._onClickIncreaseSpeed.bind(this);
+    private _onChangeFmsModeHandler: (contextTargetOverrides: IFmsOverrideContextAndTarget[]) => void = this._onChangeFmsMode.bind(this);
 
     constructor() {
         return this._createChildren()
@@ -37,6 +41,7 @@ export class AircraftController {
         this._$turnRightBtn = document.getElementsByClassName('js-btn-turnRight')[0] as HTMLButtonElement;
         this._$decreaseSpeedBtn = document.getElementsByClassName('js-btn-decreaseSpeed')[0] as HTMLButtonElement;
         this._$increaseSpeedBtn = document.getElementsByClassName('js-btn-increaseSpeed')[0] as HTMLButtonElement;
+        this._fmsController = new FmsController(this._onChangeFmsModeHandler);
         this._altitudeController = new AircraftAltitudeController();
         this._headingController = new AircraftHeadingController();
         this._speedController = new AircraftSpeedController();
@@ -53,6 +58,23 @@ export class AircraftController {
         this._$increaseSpeedBtn.addEventListener('click', this._onClickIncreaseSpeedHandler);
 
         return this;
+    }
+
+    private _onChangeFmsMode(contextTargetOverrides: IFmsOverrideContextAndTarget[]): void {
+        // console.log('_onChangeFmsMode', contextTargetOverrides);
+
+        const [
+            altitudeOverride,
+            headingOverride,
+            speedOverride,
+        ]: IFmsOverrideContextAndTarget[] = contextTargetOverrides;
+
+        this._altitudeController.overrideContextAndTarget(altitudeOverride.context, altitudeOverride.target);
+        this._headingController.overrideContextAndTarget(headingOverride.context, headingOverride.target);
+        this._speedController.overrideContextAndTarget(speedOverride.context, speedOverride.target);
+        this._altitudeController.updateView();
+        this._headingController.updateView();
+        this._speedController.updateView();
     }
 
     private _onClickDecreaseAltitude(event: UIEvent): void {
