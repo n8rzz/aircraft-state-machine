@@ -1,12 +1,12 @@
-import {ContextAbstract} from '../../abstract/ContextAbstract';
-import {ContextEnum} from '../../abstract/ContextEnum';
-import {FmsContextEnum} from './FmsContextEnum';
-import {FmsContextOverride} from './FmsContextOverride';
-import {IFmsOverrideContextAndTarget} from './IFmsOverrideContextAndTarget';
+import { FmsContextEnum } from './FmsContextEnum';
+import { FmsContextOverride } from './FmsContextOverride';
+import { IFmsOverrideContextAndTarget } from './IFmsOverrideContextAndTarget';
+import { FmsView } from './FmsView';
 
 export class FmsController {
     private _context: FmsContextEnum = null;
     private _$fmsModeControlBtnList: HTMLCollectionOf<Element> = null;
+    private _view: FmsView = null;
     private _onChangeFmsHandler: (contextTargetOverrides: IFmsOverrideContextAndTarget[]) => void = null;
     private _onClickFmsModeControlHandler: (event: UIEvent) => void = this._onClickFmsModeControl.bind(this);
 
@@ -18,8 +18,18 @@ export class FmsController {
             ._setupHandlers();
     }
 
+    public update(): void {
+        this.updateView();
+    }
+
+    public updateView(): void {
+        this._view.update(this._context);
+    }
+
     private _createChildren(): this {
+        const $fmsContextView: HTMLElement = document.getElementsByClassName('js-fmsContextName')[0] as HTMLElement;
         this._$fmsModeControlBtnList = document.getElementsByClassName('js-btn-fmsModeControl');
+        this._view = new FmsView($fmsContextView);
 
         return this;
     }

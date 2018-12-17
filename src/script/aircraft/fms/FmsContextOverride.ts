@@ -72,8 +72,8 @@ export const FmsContextOverride: {[key: string]: IFmsOverrideContextAndTarget[]}
             target: 5000,
         },
         {
-            context: NeutralHeadingContext,
-            target: 0,
+            context: null,
+            target: null,
         },
         {
             context: IncreaseSpeedContext,
@@ -96,7 +96,7 @@ export const FmsContextOverride: {[key: string]: IFmsOverrideContextAndTarget[]}
     ],
     [FmsContextEnum.Hold]: [
         {
-            context: NeutralAltitudeContext,
+            context: null,
             target: null,
         },
         {
@@ -114,8 +114,8 @@ export const FmsContextOverride: {[key: string]: IFmsOverrideContextAndTarget[]}
             target: 5000,
         },
         {
-            context: NeutralHeadingContext,
-            target: 0,
+            context: null,
+            target: null,
         },
         {
             context: DecreaseSpeedContext,
@@ -128,8 +128,8 @@ export const FmsContextOverride: {[key: string]: IFmsOverrideContextAndTarget[]}
             target: 3000,
         },
         {
-            context: NeutralHeadingContext,
-            target: 0,
+            context: null,
+            target: null,
         },
         {
             context: DecreaseSpeedContext,

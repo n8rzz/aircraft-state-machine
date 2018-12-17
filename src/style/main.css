@@ -27,13 +27,19 @@ ul {
     color: #222222;
 }
 
-.context {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
+.btn + .btn {
+    margin-left: 10px;
 }
 
-/* .context-view {} */
+.context {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+}
+
+.context + .context {
+    margin-left: 50px;
+}
 
 .context-controls {
     display: flex;

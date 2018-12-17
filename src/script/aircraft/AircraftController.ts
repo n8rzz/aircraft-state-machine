@@ -29,9 +29,17 @@ export class AircraftController {
     }
 
     public update(): void {
+        this._fmsController.update();
         this._altitudeController.update();
         this._headingController.update();
         this._speedController.update();
+    }
+
+    public updateView(): void {
+        this._fmsController.updateView();
+        this._altitudeController.updateView();
+        this._headingController.updateView();
+        this._speedController.updateView();
     }
 
     private _createChildren(): this {
@@ -61,8 +69,6 @@ export class AircraftController {
     }
 
     private _onChangeFmsMode(contextTargetOverrides: IFmsOverrideContextAndTarget[]): void {
-        // console.log('_onChangeFmsMode', contextTargetOverrides);
-
         const [
             altitudeOverride,
             headingOverride,
@@ -72,9 +78,7 @@ export class AircraftController {
         this._altitudeController.overrideContextAndTarget(altitudeOverride.context, altitudeOverride.target);
         this._headingController.overrideContextAndTarget(headingOverride.context, headingOverride.target);
         this._speedController.overrideContextAndTarget(speedOverride.context, speedOverride.target);
-        this._altitudeController.updateView();
-        this._headingController.updateView();
-        this._speedController.updateView();
+        this.updateView();
     }
 
     private _onClickDecreaseAltitude(event: UIEvent): void {

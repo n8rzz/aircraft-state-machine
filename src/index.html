@@ -8,19 +8,25 @@
         <link rel="stylesheet" href="style/main.css" />
     </head>
     <body>
-        <h2>fms/mcp mode control</h2>
-
         <div class="row">
-            <button class="btn js-btn-fmsModeControl" data-fms-mode="Apron">apron</button>
-            <button class="btn js-btn-fmsModeControl" data-fms-mode="Taxi">taxi</button>
-            <button class="btn js-btn-fmsModeControl" data-fms-mode="Waiting">waiting</button>
-            <button class="btn js-btn-fmsModeControl" data-fms-mode="Takeoff">takeoff</button>
-            <button class="btn js-btn-fmsModeControl" data-fms-mode="Climb">climb</button>
-            <button class="btn js-btn-fmsModeControl" data-fms-mode="Cruise">cruise</button>
-            <button class="btn js-btn-fmsModeControl" data-fms-mode="Hold">hold</button>
-            <button class="btn js-btn-fmsModeControl" data-fms-mode="Descent">descent</button>
-            <button class="btn js-btn-fmsModeControl" data-fms-mode="Approach">approach</button>
-            <button class="btn js-btn-fmsModeControl" data-fms-mode="Landing">landing</button>
+            <div class="context">
+                <h3>fms mode control</h3>
+                <div class="context-view">
+                    <div class="js-fmsContextName">Initialize</div>
+                </div>
+                <div class="context-controls">
+                    <button class="btn js-btn-fmsModeControl" data-fms-mode="Apron">apron</button>
+                    <button class="btn js-btn-fmsModeControl" data-fms-mode="Taxi">taxi</button>
+                    <button class="btn js-btn-fmsModeControl" data-fms-mode="Waiting">waiting</button>
+                    <button class="btn js-btn-fmsModeControl" data-fms-mode="Takeoff">takeoff</button>
+                    <button class="btn js-btn-fmsModeControl" data-fms-mode="Climb">climb</button>
+                    <button class="btn js-btn-fmsModeControl" data-fms-mode="Cruise">cruise</button>
+                    <button class="btn js-btn-fmsModeControl" data-fms-mode="Hold">hold</button>
+                    <button class="btn js-btn-fmsModeControl" data-fms-mode="Descent">descent</button>
+                    <button class="btn js-btn-fmsModeControl" data-fms-mode="Approach">approach</button>
+                    <button class="btn js-btn-fmsModeControl" data-fms-mode="Landing">landing</button>
+                </div>
+            </div>
         </div>
 
         <h2>a/c contexts</h2>
